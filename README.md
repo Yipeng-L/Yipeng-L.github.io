@@ -1,4 +1,3 @@
-# Yipeng-L.github.io
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,26 +29,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!--https://code.jquery.com/jquery-3.3.1.js
-
-https://code.jquery.com/jquery-3.3.1.min.js -->
+  
     
     
     <title>Near Restaurant</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400"><!-- Google web font "Open Sans" -->
-<!--
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/jquery-ui.css">
--->
-    <!--AIzaSyCHiPcn5TOQcCIGX8M6S68YBMKiLZP5emk-->
-              <!-- AIzaSyBREuFDLAYSrxjj69koGsHLX_VejDMKWuE -->
-    <!-- Main CSS -->
-	<!-- google map -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHiPcn5TOQcCIGX8M6S68YBMKiLZP5emk&libraries=places"></script> <!--AIzaSyCHiPcn5TOQcCIGX8M6S68YBMKiLZP5emk-->
-              <!-- AIzaSyBREuFDLAYSrxjj69koGsHLX_VejDMKWuE -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHiPcn5TOQcCIGX8M6S68YBMKiLZP5emk&libraries=places"></script> 
+             
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <!-- script src="js/templatemo-script.js"></script -->
+    
 <script>
 var map;
 var myCenter=new google.maps.LatLng(-37.8764368,145.0396434);
@@ -66,7 +56,7 @@ function initialize() {
     zoom:15,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
-  map = new google.maps.Map(document.getElementById("googleMap"),mapProp); //��ʾ���map,�����Ӷ��map����
+  map = new google.maps.Map(document.getElementById("googleMap"),mapProp); 
   
    var autocomplete = new google.maps.places.Autocomplete(document.getElementById('localtion'));
     google.maps.event.addListener(autocomplete, 'place_changed', function(){
@@ -76,17 +66,17 @@ function initialize() {
         location2 += place.geometry.location.F;
         location0 = "(" + location1 + ',' + location2 + ")";
     });
-  //��ѯ�����Ĳ͹�
+  
   var request =  {
 	  location: myCenter,
-	  radius:1000, // meter
+	  radius:1000, 
 	  types: ['restaurant']
   };
 
   //marker
   var marker=new google.maps.Marker({
 	position: location0,
-	animation:google.maps.Animation.BOUNCE, //�ɶ���ǩ
+	animation:google.maps.Animation.BOUNCE, 
   });
 
   marker.setMap(map);
@@ -119,10 +109,7 @@ function createMarker(place) {
         infowindow.open(map, this);
       });
 
-    /**function activatePlaceSearch(){
-        var input = document.getElementById('localtion');
-        var autocomplete = new google.maps.places.Autocpmplete(input);
-    }*/
+   
 }
     
 function codeAddress(){
@@ -135,10 +122,10 @@ function codeAddress(){
 			var marker = new google.maps.Marker({
 				map: map,
 				position: results[0].geometry.location,
-				animation:google.maps.Animation.BOUNCE //�ɶ���ǩ
+				animation:google.maps.Animation.BOUNCE 
 			});
             
-              //��ѯ�����Ĳ͹�
+              
             var request =  {
 	           location: center,
 	           radius:1000, // meter
@@ -174,22 +161,21 @@ google.maps.event.addDomListener(window, 'load', initialize);
         </div>
 			<div class="row tm-section-mt">
                <div class="col-lg-12 mb-5">
-					<!--form action="#contact" method="post" class="tm-contact-form"-->
                     <div class="row">
-<!--                        <div class="form-group col-xl-4">-->
+
                             <input type="text" id="localtion" name="localtion" class="form-control" placeholder="Search Locations..." required/>
-<!--                        </div>-->
-<!--						<div class="form-group col-xl-4">-->
+
+
                             <button type="submit" class="button button1  pull-right" onclick="codeAddress()">Search</button>
-<!--                        </div>-->
+
                     </div>
-					<!--/form-->
+					
 				</div>
                 <div id="googleMap" style="width:80%;height:500px;">
                 </div>
 
         <hr>
-        <!-- Footer -->
+        
         <footer class="row mt-5 mb-5">
             <div class="col-lg-12">
                 <p class="text-center tm-text-gray tm-copyright-text mb-0">Copyright &copy;
@@ -198,7 +184,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
             </div>
         </footer>
     </div>
-    <!-- .container -->
+   
 
 </body>
 </html>
