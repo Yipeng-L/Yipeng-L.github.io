@@ -35,7 +35,7 @@
     <title>Near Restaurant</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
 
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4LPKuoaZVAuF5pYhjJvVlZEFh_y05udsemk&libraries=places"></script> 
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlgAjXpOqptxx9RA93TxtEEB4MkpLO6xw&libraries=places"></script> 
              
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
